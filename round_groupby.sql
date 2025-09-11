@@ -45,3 +45,7 @@ select customer_id, sum(amount) from payment where customer_id>3 group by custom
 select customer_id, sum(amount) from payment where customer_id>3 group by customer_id;
 
 select customer_id, sum(amount) from payment group by customer_Id having sum(amount)>100;
+
+select payment_date, sum(amount) as total from payment group by payment_date having month(payment_date) = 6 and sum(amount) <50;
+
+select customer_id, sum(amount) as total from payment group by customer_id ;
